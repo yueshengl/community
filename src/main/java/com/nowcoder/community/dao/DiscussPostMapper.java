@@ -23,5 +23,10 @@ public interface DiscussPostMapper {
     //查询表里有多少条数据/评论(全部/个人)
     int selectDiscussPostRows(@Param("userId") int userId);
 
+    int insertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+
+    int updateCommentCount(int id, int commentCount);
 
 }

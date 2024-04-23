@@ -10,14 +10,23 @@ import java.util.Date;
  */
 public class DiscussPost {
 
+    // 帖子id
     private int id;
+    // 帖子作者id
     private int userId;
+    // 帖子标题
     private String title;
+    // 帖子内容
     private String content;
+    // 帖子类型 0代表正常 1代表置顶
     private int type;
+    // 帖子状态 0代表正常  1代表精华 2代表拉黑
     private int status;
+    //创建时间
     private Date createTime;
+    //帖子评论数量
     private int commentCount;
+    //帖子分数（用来排名帖子）
     private double score;
 
     public int getId() {
