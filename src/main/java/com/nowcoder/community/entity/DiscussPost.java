@@ -1,5 +1,10 @@
 package com.nowcoder.community.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
+
 import java.util.Date;
 
 /**
@@ -8,25 +13,35 @@ import java.util.Date;
  * @Description: DiscussPost
  * @Version: 1.0
  */
+@Document(indexName = "discusspost", type = "_doc", shards = 6, replicas = 3)
 public class DiscussPost {
 
     // 帖子id
+    @Id
     private int id;
     // 帖子作者id
+    @Field(type = FieldType.Integer)
     private int userId;
     // 帖子标题
+    @Field(type = FieldType.Text,analyzer = "ik_max_word",searchAnalyzer = "ik_smart")
     private String title;
     // 帖子内容
+    @Field(type = FieldType.Text,analyzer = "ik_max_word",searchAnalyzer = "ik_smart")
     private String content;
     // 帖子类型 0代表正常 1代表置顶
+    @Field(type = FieldType.Integer)
     private int type;
     // 帖子状态 0代表正常  1代表精华 2代表拉黑
+    @Field(type = FieldType.Integer)
     private int status;
     //创建时间
+    @Field(type = FieldType.Date)
     private Date createTime;
     //帖子评论数量
+    @Field(type = FieldType.Integer)
     private int commentCount;
     //帖子分数（用来排名帖子）
+    @Field(type = FieldType.Double)
     private double score;
 
     public int getId() {

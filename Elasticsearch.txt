@@ -1,0 +1,19 @@
+ElasticSearch命令
+
+C:\Windows\System32>curl -X GET "localhost:9200/_cat/nodes?v"
+ip        heap.percent ram.percent cpu load_1m load_5m load_15m node.role master name
+127.0.0.1           34          90   6                          mdi       *      497J0hZ
+
+C:\Windows\System32>curl -X GET "localhost:9200/_cat/indices?v"
+health status index uuid pri rep docs.count docs.deleted store.size pri.store.size
+
+C:\Windows\System32>curl -X PUT "localhost:9200/test"
+{"acknowledged":true,"shards_acknowledged":true,"index":"test"}
+C:\Windows\System32>curl -X GET "localhost:9200/_cat/indices?v"
+health status index uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   test  XohMLVAlQ_GVQpS81MGbqw   5   1          0            0      1.1kb          1.1kb
+
+C:\Windows\System32>curl -X DELETE "localhost:9200/test"
+{"acknowledged":true}
+C:\Windows\System32>curl -X GET "localhost:9200/_cat/indices?v"
+health status index uuid pri rep docs.count docs.deleted store.size pri.store.size
