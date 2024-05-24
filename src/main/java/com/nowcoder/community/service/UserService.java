@@ -227,4 +227,8 @@ public class UserService implements CommunityConstant {
 
         return list;
     }
+
+    public int updatePassword(User user, String newPassword) {
+        return userMapper.updatePassword(user.getId(), CommunityUtil.md5(newPassword+ user.getSalt()));
+    }
 }

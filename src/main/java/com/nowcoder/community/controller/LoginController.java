@@ -61,7 +61,7 @@ public class LoginController implements CommunityConstant {
 
     @RequestMapping(path = "/login",method = RequestMethod.GET)
     public String getLoginPage(){
-        return "/site/Login";
+        return "/site/login";
     }
 
     @RequestMapping(path = "/register",method = RequestMethod.POST)
@@ -138,7 +138,7 @@ public class LoginController implements CommunityConstant {
         }
         if(StringUtils.isBlank(kaptcha) || StringUtils.isBlank(code) || !kaptcha.equalsIgnoreCase(code)){
             model.addAttribute("codeMsg","验证码不正确");
-            return "/site/Login";
+            return "/site/login";
         }
         // 检查账号，密码
         int expiredSeconds = rememberme ? REMEMBER_EXPIRED_SECONDS : DEFAULT_EXPIRED_SECONDS;
@@ -153,7 +153,7 @@ public class LoginController implements CommunityConstant {
         else {
             model.addAttribute("usernameMsg",map.get("usernameMsg"));
             model.addAttribute("passwordMsg",map.get("passwordMsg"));
-            return "/site/Login";
+            return "/site/login";
         }
     }
 
