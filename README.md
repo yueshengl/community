@@ -19,28 +19,28 @@
 
 ### 1.3项目功能
 
-![image](C:\Users\HUAWEI\Desktop\2.png)
+![image](project_function.png)
 
 #### 1.3.1社区主页
 
-![image](C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\image-20240524175017427.png)
+![image](community_home.png)
 
 #### 1.3.2帖子详情
 
-![image](C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\image-20240524175117158.png)
+![image](community_postDetail.png)
 
 
 #### 1.3.3个人主页
 
-![image](C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\image-20240525212046396.png)
+![image](community_personal.png)
 
 #### 1.3.4消息系统
 
-![image](C:\Users\HUAWEI\AppData\Roaming\Typora\typora-user-images\image-20240525211934717.png)
+![image](community_message.png)
 
 ### 1.4项目部署
 
-![1](C:\Users\HUAWEI\Desktop\11.png)
+![image](project_deply.png)
 
 
 ## 2.切换开发和生产环境
