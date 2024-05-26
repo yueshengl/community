@@ -40,7 +40,7 @@
 
 ### 1.4项目部署
 
-![image](project_deply.png)
+![image](project_deploy.png)
 
 
 ## 2.切换开发和生产环境
